@@ -11,13 +11,13 @@ variable "Vmname" {
 variable "machine_type" {
     description = "type of the machine"
     type = string
-    source = machinetype.list_machinetypes
+    source = compute.machinetype.list_machinetypes
 }
 
 variable "zone" {
   description = "Zone on which the VM should be provisioned"
   type = string
-  source = zone.list_zone
+  source = compute.zone.list_zones
 }
 
 variable "tags" {
@@ -67,6 +67,7 @@ variable "metadata_startup_script" {
 variable "OSimage" {
   description = "OS Image to use"
   type = string
+  source = compute.image.list_images
 }
 
 variable "auto_delete" {
@@ -98,7 +99,7 @@ variable "source" {
   description = "Existing source of the boot-disk(self-id)"
   type = string
   default = null
-  source = disk.list_disk
+  source = compute.disk.list_disk
 }
 
 variable "can_ip_forward" {
@@ -113,13 +114,13 @@ variable "can_ip_forward" {
 variable "myVmNet" {
   description = "Existing VPC Name"
   type = string
-  source = networks.list_network
+  source = compute.networks.list_networks
 }
 
 variable "mySubNet" {
   description = "Existing Subnet"
   type = string
-  source = subnetwork.list_subnetworks
+  source = compute.subnetwork.list_subnetworks
 }
 
 variable "subnetwork_project" {
