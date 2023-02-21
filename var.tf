@@ -11,7 +11,7 @@ variable "Vmname" {
 variable "machine_type" {
     description = "type of the machine"
     type = string
-    source = machine_type.list_machinetypes
+    source = machinetype.list_machinetypes
 }
 
 variable "zone" {
