@@ -9,9 +9,9 @@ variable "Vmname" {
 }
 
 variable "machine_type" {
-    description = "type of the machine"
-    type = string
-    source = compute.machinetype.list_machinetypes
+  description = "type of the machine"
+  type = string
+  source = compute.machinetype.list_machinetypes
 }
 
 variable "zone" {
