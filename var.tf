@@ -114,7 +114,7 @@ variable "can_ip_forward" {
 variable "myVmNet" {
   description = "Existing VPC Name"
   type = string
-  source = networks.list_networks
+  source = network.list_networks
 }
 
 variable "mySubNet" {
